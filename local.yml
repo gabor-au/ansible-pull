@@ -1,8 +1,12 @@
+---
 - hosts: localhost
   connections: local
   become: true
 
   tasks:
-  - name: Install htop
+  - name: Install packages
     apt:
-      name: htop
+      name:
+        - htop
+        - mc
+        - tmux
